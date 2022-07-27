@@ -59,7 +59,7 @@ public class AccountService {
 		accounttransactionrepository.save(transaction);
 
 		return transaction;
-	
+	//pan card 
 		//String pancard= customer.getPanNumber();  
 //		
 //		if(customerrepository.getByPanNumber(pancard) ==null) {

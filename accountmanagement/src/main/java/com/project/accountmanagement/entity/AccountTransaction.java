@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
+//account transaction
 @Entity
 @Table(name="AccountTransaction")
 public class AccountTransaction {
