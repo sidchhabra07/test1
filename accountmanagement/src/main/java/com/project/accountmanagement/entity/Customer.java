@@ -1,6 +1,5 @@
 package com.project.accountmanagement.entity;
 import java.time.LocalDate;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,11 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonFormat.Shape;
-
 @Entity
-//@TableGenerator(name = "Customer",initialValue = 100000)
 @Table(name="Customer")
 public class Customer {
 	@SequenceGenerator(name="seq",initialValue=100000, allocationSize=1)
@@ -27,8 +22,6 @@ public class Customer {
 	private String customerName;
 	
 	@Column(name="dateOfBirth")
-//	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd")
-//	@NotNull(message = "Please provide your DOB.")
 	private LocalDate dateOfBirth;
 	
 	@Column(name="panNumber")
@@ -101,7 +94,6 @@ public class Customer {
 
 	public Customer() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Customer(

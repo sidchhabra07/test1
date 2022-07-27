@@ -55,7 +55,6 @@ public class BankAccount {
 
 	public BankAccount() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

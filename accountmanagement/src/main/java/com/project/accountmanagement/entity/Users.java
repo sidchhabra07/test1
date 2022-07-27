@@ -7,7 +7,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Users")
 public class Users {
-	//CustomerId
 	@Id
 	@Column(name="userId")
 	private int userId;
@@ -44,7 +43,6 @@ public class Users {
 
 	public Users() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Users(int userId, String password, int roleId) {

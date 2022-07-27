@@ -1,13 +1,14 @@
 package com.project.accountmanagement.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name="AccountTransaction")
@@ -22,7 +23,8 @@ public class AccountTransaction {
 	private long accountNumber;
 	
 	@Column(name="transactionDate")
-	private Date transactionDate;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	private LocalDate transactionDate;
 	
 	@Column(name="type")
 	private String type;
@@ -49,11 +51,11 @@ public class AccountTransaction {
 		this.accountNumber = accountNumber;
 	}
 
-	public Date getTransactionDate() {
+	public LocalDate getTransactionDate() {
 		return transactionDate;
 	}
 
-	public void setTransactionDate(Date transactionDate) {
+	public void setTransactionDate(LocalDate transactionDate) {
 		this.transactionDate = transactionDate;
 	}
 
@@ -83,10 +85,9 @@ public class AccountTransaction {
 
 	public AccountTransaction() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public AccountTransaction(int transactionId, long accountNumber, Date transactionDate, String type, String subType,
+	public AccountTransaction(int transactionId, long accountNumber, LocalDate transactionDate, String type, String subType,
 			long currentBalane) {
 		super();
 		this.transactionId = transactionId;
@@ -103,6 +104,6 @@ public class AccountTransaction {
 				+ ", transactionDate=" + transactionDate + ", type=" + type + ", subType=" + subType
 				+ ", currentBalane=" + currentBalane + "]";
 	}
-	
+
 	
 }
