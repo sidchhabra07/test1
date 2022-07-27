@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
-
+//new customer table
 @Entity
 //@TableGenerator(name = "Customer",initialValue = 100000)
 @Table(name="Customer")
