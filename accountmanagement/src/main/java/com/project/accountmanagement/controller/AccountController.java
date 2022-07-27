@@ -23,7 +23,7 @@ import com.project.accountmanagement.service.AccountService;
 import com.project.accountmanagement.service.AccountService;
 import com.project.accountmanagement.service.ManagerService;
 
-
+// This is a AccountController file
 @RestController
 public class AccountController {
 	@Autowired
